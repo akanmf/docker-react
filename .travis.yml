@@ -4,4 +4,4 @@ services:
 before_install: 
   - docker build -t akanmf/docker-react -f Dockerfile.dev .
 script:
-  - docker run akanmf/docker-react npm test -- --watchAll=false
+  - docker run -e CI=true akanmf/docker-react npm run test -- --coverage
