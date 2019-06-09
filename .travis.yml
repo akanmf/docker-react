@@ -1,9 +1,7 @@
 sudo: required
 services:
   - docker
-
 before_install: 
   - docker build -t akanmf/docker-react -f Dockerfile.dev .
-
 script:
-  - docker run akanmf/docker-react npm run test -- --coverage
+  - docker run akanmf/docker-react npm run test
